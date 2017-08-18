@@ -10,6 +10,21 @@ namespace ArrayCopy
     {
         static void Main(string[] args)
         {
+            int[] squares = { 1, 4, 9, 16 };
+
+            ////copying squares[] values to copy[]
+            //int[] copy = new int[8];
+            //squares.CopyTo(copy, 2);
+
+            //LINQ
+            int[] copy = squares.ToArray();
+
+            foreach (int value in copy)
+            {
+                Console.WriteLine(value);
+            }
+            Console.WriteLine(string.Format(
+                $"square == copy? {squares == copy}"));
         }
     }
 }
